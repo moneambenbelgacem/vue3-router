@@ -17,16 +17,20 @@
       <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <router-link class="nav-link" to="/"
+            <router-link class="nav-link" :to="{ name: 'Home' }"
               >Home
               <span class="sr-only">(current)</span>
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/about">About</router-link>
+            <router-link class="nav-link" :to="{ name: 'About' }"
+              >About</router-link
+            >
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/blog">Blog</router-link>
+            <router-link class="nav-link" :to="{ name: 'Blog' }"
+              >Blog</router-link
+            >
           </li>
         </ul>
       </div>
