@@ -17,7 +17,15 @@
     </div>
     <div class="row">
       <div class="col-md-6" v-for="post in posts">
-        <h1>{{ post.title }}</h1>
+        <h1>
+          <router-link
+            :to="{
+              name: 'post-show',
+              params: { id: post.id, slug: post.slug },
+            }"
+            >{{ post.title }}</router-link
+          >
+        </h1>
         <p class="lead">{{ post.content }}</p>
       </div>
     </div>
@@ -31,28 +39,28 @@ export default {
         {
           id: 1,
           title: 'learn Angular',
-          slug: 'learn-angular ',
+          slug: 'learn-angular',
           content:
             'It uses utility classes for typography and spacing to space conte',
         },
         {
           id: 2,
           title: 'learn vue',
-          slug: 'learn-vue ',
+          slug: 'learn-vue',
           content:
             'It uses utility classes for typography and spacing to space conte',
         },
         {
           id: 3,
           title: 'learn js',
-          slug: 'learn-javascript ',
+          slug: 'learn-javascript',
           content:
             'It uses utility classes for typography and spacing to space conte',
         },
         {
           id: 4,
           title: 'learn git',
-          slug: 'learn-git ',
+          slug: 'learn-git',
           content:
             'It uses utility classes for typography and spacing to space conte',
         },
