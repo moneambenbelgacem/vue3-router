@@ -35,15 +35,37 @@
         </ul>
       </div>
     </nav>
+    <div class="row ">
+      <div class="col-md-6 mx-auto">
+        <button type="button" @click="previous" class="btn btn-success">
+          Previous
+        </button>
+        <button type="button" @click="redirect" class="btn btn-warning">
+          Redirect
+        </button>
+        <button type="button" @click="next" class="btn btn-danger">Next</button>
+      </div>
+    </div>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  methods: {
+    previous() {
+      this.$router.go(-1);
+    },
+    redirect() {
+      this.$router.go(1);
+    },
+    next() {
+      this.$router.push('/');
+    },
+  },
+};
 </script>
 <style scoped>
 .router-link-active {
   color: black !important;
   background: white;
-  padding: 6px;
 }
 </style>
