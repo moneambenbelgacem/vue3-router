@@ -1,6 +1,6 @@
 <template lang="">
   <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
       <a class="navbar-brand" href="#">Navbar</a>
       <button
         class="navbar-toggler"
@@ -40,4 +40,9 @@
 <script>
 export default {};
 </script>
-<style lang=""></style>
+<style scoped>
+.router-link-active {
+  color: black !important;
+  background: white;
+}
+</style>
