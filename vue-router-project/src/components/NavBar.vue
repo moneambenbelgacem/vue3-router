@@ -44,5 +44,6 @@ export default {};
 .router-link-active {
   color: black !important;
   background: white;
+  padding: 6px;
 }
 </style>
