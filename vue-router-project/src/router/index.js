@@ -3,6 +3,7 @@ import Home from '../views/Home.vue';
 import About from '../views/About.vue';
 import Blog from '../views/blog/blogHome.vue';
 import Show from '../views/blog/Show.vue';
+import PageNotFound from '../views/PageNotFound.vue';
 
 const routes = [
   {
@@ -25,6 +26,10 @@ const routes = [
     name: 'post-show',
     component: Show,
     props: true,
+  },
+  {
+    path: '/:catchAll(.*)',
+    component: PageNotFound,
   },
 ];
 
