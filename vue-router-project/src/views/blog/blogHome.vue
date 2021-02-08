@@ -35,37 +35,14 @@
 export default {
   data() {
     return {
-      posts: [
-        {
-          id: 1,
-          title: 'learn Angular',
-          slug: 'learn-angular',
-          content:
-            'It uses utility classes for typography and spacing to space conte',
-        },
-        {
-          id: 2,
-          title: 'learn vue',
-          slug: 'learn-vue',
-          content:
-            'It uses utility classes for typography and spacing to space conte',
-        },
-        {
-          id: 3,
-          title: 'learn js',
-          slug: 'learn-javascript',
-          content:
-            'It uses utility classes for typography and spacing to space conte',
-        },
-        {
-          id: 4,
-          title: 'learn git',
-          slug: 'learn-git',
-          content:
-            'It uses utility classes for typography and spacing to space conte',
-        },
-      ],
+      posts: [],
     };
+  },
+  mounted() {
+    fetch('http://localhost:5000/posts')
+      .then((res) => res.json())
+      .then((data) => (this.posts = data))
+      .catch((err) => console.log('oooooooooooooorrrr'));
   },
 };
 </script>
