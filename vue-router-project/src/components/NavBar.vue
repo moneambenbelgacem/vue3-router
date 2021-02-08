@@ -15,7 +15,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarColor02">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav  -auto">
           <li class="nav-item active">
             <router-link class="nav-link" :to="{ name: 'Home' }"
               >Home
@@ -35,7 +35,7 @@
         </ul>
       </div>
     </nav>
-    <div class="row ">
+    <div class="row">
       <div class="col-md-6 mx-auto">
         <button type="button" @click="previous" class="btn btn-success">
           Previous
@@ -43,7 +43,9 @@
         <button type="button" @click="redirect" class="btn btn-warning">
           Redirect
         </button>
-        <button type="button" @click="next" class="btn btn-danger">Next</button>
+        <button type="button" @click="next" class="btn btn-danger">
+          Next
+        </button>
       </div>
     </div>
   </div>
