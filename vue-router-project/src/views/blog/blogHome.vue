@@ -15,7 +15,7 @@
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
       </p>
     </div>
-    <div class="row">
+    <div class="row" v-if="posts.length">
       <div class="col-md-6" v-for="post in posts">
         <h1>
           <router-link
